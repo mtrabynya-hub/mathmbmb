@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <title>آزمایشگاه ریاضی - مجموعه‌ها</title>
+</head>
+<body>
+    <h2>محاسبه تعداد اعضای مجموعه ( n(A) )</h2>
+
+    <label>مجموعه را وارد کن (اعضا را با کاما جدا کن):</label><br><br>
+    <input id="setInput" type="text" placeholder="مثلاً: a,b,c,5,7" size="40"><br><br>
+
+    <button onclick="calc()">محاسبه</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calc() {
+            let raw = document.getElementById("setInput").value;
+            let arr = raw.split(",").map(x => x.trim()).filter(x => x !== "");
+            document.getElementById("result").innerHTML =
+                "تعداد اعضای مجموعه = n(A) = " + arr.length;
+        }
+    </script>
+</body>
+</html>
